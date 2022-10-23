@@ -1,0 +1,284 @@
+:root {
+    --verde: #0B5345;
+    --amarillo: #E9B000;
+    --rojo: #E24E42;
+    --footer:#074639be;
+  }
+
+header{
+  width: 100%;
+}
+
+.container_logo-alura{
+  width: 30px;
+  margin: 20px 40px;
+}
+
+body{
+  background-color: var(--verde);
+  font-family: "Roboto", sans-serif;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo pantalla principal */
+.container_principal{
+  display: block;
+}
+
+.container_principal.active{
+  display: none;
+}
+
+.principal_logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.logo_img{
+  width: 33%;
+}
+
+.principal_button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button_start{
+  margin-top: 20px;
+  padding: 24px 27px;
+  background: var(--amarillo);
+  border: none;
+  border-radius: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  color:white;
+  cursor: pointer;
+  transition: 500ms;
+  font-family: 'Gloria Hallelujah';
+}
+
+.button_start:hover{
+  transform: scale(1.1);
+}
+
+.button_add{
+  margin-top: 20px;
+  padding: 24px 13px;
+  background: var(--rojo);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  cursor: pointer;
+  transition: 500ms;
+  font-family: 'Gloria Hallelujah';
+}
+
+.button_add:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo pantalla agregar palabra */
+.container_add{
+  display: none;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_add.active{
+  display: flex;
+}
+
+.add_input{
+  height: 60%;
+  width: 60%;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Gloria Hallelujah';
+  color: white;
+  background-color: #266b5da8;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+} 
+
+.add_input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.add_alert{
+  font-size: 18px;
+  color: white;
+  font-family: 'Gloria Hallelujah';
+  margin-top: 20px;
+
+}
+
+.button_agregar, 
+.button_new-game{
+  margin-top: 25px;
+  padding: 15px 20px;
+  background: var(--amarillo);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color:white;
+  cursor: pointer;
+  transition: 500ms;
+  font-family: 'Gloria Hallelujah';
+}
+
+.button_agregar:hover,
+.button_new-game:hover{
+  transform: scale(1.1);
+}
+
+.button_cancel,
+.button_desist{
+  margin: 20px 20px;
+  padding: 15px 20px;
+  background: var(--rojo);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 500ms;
+  font-family: 'Gloria Hallelujah'
+}
+
+.button_new-game{
+  margin: 0;
+}
+
+.button_cancel:hover,
+.button_desist:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo pantalla juego */
+.container_game{
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.container_game.active{
+  display: flex;
+}
+
+.game_board{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ahorcado_uno, 
+.ahorcado_dos, 
+.ahorcado_tres,
+.ahorcado_cuatro,
+.ahorcado_cinco,
+.ahorcado_seis,
+.ahorcado_siete,
+.ahorcado_ocho,
+.ahorcado_nueve{
+  display:none;
+}
+
+.ahorcado_uno.active, 
+.ahorcado_dos.active, 
+.ahorcado_tres.active,
+.ahorcado_cuatro.active,
+.ahorcado_cinco.active,
+.ahorcado_seis.active,
+.ahorcado_siete.active,
+.ahorcado_ocho.active,
+.ahorcado_nueve.active{
+  display:block;
+}
+
+.canvas{
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translate(-50%, -40%);
+  top: 30%;
+}
+
+#horca{
+  width: 55%;
+  height: 100%;
+}
+
+.imagenes{
+  position: absolute;
+  left: 200px;
+  bottom: 130px;
+  height: 452px;
+}
+
+.imagenes img{
+  height: 100%;
+}
+
+.game__button{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Estilo footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: var(--verde);
+}
+
+footer p,
+.fa-brands {
+  font-size: 19px;
+  font-weight: 400;
+  color: white;
+  margin: 0 10px;
+}
+
+.fa-brands {
+  font-size: 32px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+  transform: scale(1.1);
+  color:white;
+}
+  

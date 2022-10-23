@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Fontawsome -->
+    <script src="https://kit.fontawesome.com/a8ad4fc3d8.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <img class="container_logo-alura" src="imagenes/a png.png">
+        </header>
+
+        <!-- Pantalla principal -->
+        <section id="principal_desaparecer" class="container_principal">
+                <div class="principal_logo">
+                    <img class="logo_img" src="imagenes/ale titulo.png">
+                </div>
+        
+                <div class="principal_button">
+                    <button class="button_start" id="start_game" onclick="comenzarJuego()">Iniciar Juego</button>
+                    <button class="button_add" id="button_add-word" onclick="screen_add()">Agregar Palabra</button>
+                </div>
+        </section>
+
+
+        <!-- Agregar palabra -->
+
+        <section class="container_add" id="aparecer_add">
+            <input class="add_input" type="text" id="add_new-word"  maxlength="8" placeholder="Escriba una palabra">
+
+            <div class="add_alert">
+                <label for=""> Máximo 8 carácteres</label>
+            </div>
+
+            <div class="add_button">
+                <button class="button_agregar" id="btn_add">Agregar palabra</button>
+                <button class="button_cancel" id="button_return">Cancelar</button>
+            </div>
+
+
+        </section>
+
+        <!-- Pantalla juego -->
+
+        <section class="container_game" id="aparecer_canvas">
+            <div class="game_board">
+                <div id="div-aparece-ahorcado" class="canvas">
+                    <div class="imagenes">
+                        <img class="ahorcado_uno" src="imagenes/ahorcado-01.png">
+                        <img class="ahorcado_dos" src="imagenes/ahorcado-02.png">
+                        <img class="ahorcado_tres" src="imagenes/ahorcado-03.png">
+                        <img class="ahorcado_cuatro" src="imagenes/ahorcado-04.png">
+                        <img class="ahorcado_cinco" src="imagenes/ahorcado-05.png">
+                        <img class="ahorcado_seis" src="imagenes/ahorcado-06.png">
+                        <img class="ahorcado_siete" src="imagenes/ahorcado-07.png">
+                        <img class="ahorcado_ocho" src="imagenes/ahorcado-08.png">
+                        <img class="ahorcado_nueve" src="imagenes/ahorcado-09.png">
+                    </div>
+                    <canvas id="horca" height="860px" width="1200px">
+                    </canvas>
+                    <div class="game__button">
+                       <button class="button_new-game">Nuevo Juego</button>
+                       <button class="button_desist">Desistir</button>
+                   </div>
+                </div>
+                
+            </div>
+            
+
+        </section>
+
+        <footer>
+            <p>Desarrollado por Alejandra Salvarredy</p>
+            <a href="https://www.linkedin.com/in/alejandrasalvarredy/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/alesalvarredy" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        </footer>
+    </main>
+
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
+</html>
