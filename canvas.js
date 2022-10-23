@@ -38,7 +38,7 @@ function dibujarCanvas() {
     tablero.closePath();
   }
   function escribirLetraCorrecta(index) {
-    tablero.font = 'bold 63px Inter';
+    tablero.font = 'bold 63px inter';
     tablero.lineWidth = 6;
     tablero.lineCap="round";
     tablero.lineJoin="round";
@@ -49,7 +49,7 @@ function dibujarCanvas() {
   }
 
   function escribirLetraIncorrecta(letra, errorsLeft) {
-    tablero.font = 'bold 40px Inter';
+    tablero.font = 'bold 40px inter';
     tablero.lineWidth = 6;
     tablero.lineCap ="round";
     tablero.lineJoin ="round";
