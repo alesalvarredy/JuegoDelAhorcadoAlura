@@ -42,4 +42,52 @@
     .button_cancel{
         font-size: 16px;
     }
+
+      .game_board {
+        position: relative;
+        height: 600px;
+        justify-content: end;
+    }
+
+    .canvas {
+        position: relative;
+        left: unset;
+        transform: none;
+        top: unset;
+        height: 350px;
+        justify-content: flex-end;
+    }
+
+    #horca {
+        width: 100%;
+        height: 280px;
+        position: absolute;
+        top: 35%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+    }
+
+    .imagenes {
+        left: 50%;
+        bottom: 30%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    .game_board{
+        height: 457px;
+    }
+
+    .imagenes{
+        height: 249px;
+    }
+
+    .button_new-game, .button_desist {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
 }
