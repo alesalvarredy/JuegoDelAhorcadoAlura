@@ -75,7 +75,7 @@ btn_desist.addEventListener("click", function(){
   )
     setTimeout(() => {
       location.reload();
-    }, 3000);
+    }, 1500);
     
 })
 
