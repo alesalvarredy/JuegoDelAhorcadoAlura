@@ -45,6 +45,16 @@ btn_new_game.addEventListener("click", function(){
     ahorcado_img.forEach(element => {
       element.classList.remove("active");
     });
+    Swal.fire({ 
+      title: "Nueva partida cargada correctamente",
+      icon: "success",
+      confirmButtonColor:"#0B5345",
+      timer: 1500,
+      timerProgressBar: true,
+      showConfirmButton: false,
+    }
+    )
+
     setTimeout(() => {
       comenzarJuego();
     }, 300);
@@ -58,7 +68,7 @@ btn_desist.addEventListener("click", function(){
     title: "La palabra secreta era: " + palabraSecreta,
     icon: "warning",
     confirmButtonColor:"#0B5345",
-    timer: 3000,
+    timer: 1500,
     timerProgressBar: true,
     showConfirmButton: false,
   }
