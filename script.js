@@ -155,7 +155,7 @@ function guardarPalabra() {
         confirmButtonColor:"#0B5345",
       }
       )
-      return;
+      return false;
     } else if(nuevaPalabra !== ""){
       palabras.push(nuevaPalabra.toUpperCase());
       Swal.fire({ 
@@ -163,7 +163,9 @@ function guardarPalabra() {
         icon: "success",
         confirmButtonColor:"#0B5345",
       }
-      ) 
+      )
+      comenzarJuego();
+      container_add.classList.remove("active");
     }else{
         Swal.fire({ 
             title: "Por favor ingrese la palabra",
@@ -171,6 +173,7 @@ function guardarPalabra() {
             confirmButtonColor:"#0B5345",
           }
           )
+          return;
     }
     console.log(nuevaPalabra);
 }
@@ -178,8 +181,7 @@ function guardarPalabra() {
 // al click hace que se guarde la palabra
 document.getElementById("btn_add").onclick = () => {
     guardarPalabra();
-    comenzarJuego();
-    container_add.classList.remove("active");
+    
     }
 
 
