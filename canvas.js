@@ -53,15 +53,11 @@ function dibujarCanvas() {
     tablero.lineWidth = 6;
     tablero.lineCap ="round";
     tablero.lineJoin ="round";
-    tablero.fillStyle ="#FFFFFF"
+    tablero.fillStyle ="#E24E42"
     tablero.fillText(letra,535+(40*(10-errorsLeft)),710,40)
   }
 
   function dibujarAhorcado(puntaje) {
-    tablero.lineWidth=8
-    tablero.lineCap="round"
-    tablero.lineJoin="round"
-    tablero.strokeStyle = "#FFFFFF"
     if(puntaje===8){
     ahorcado_uno.classList.add("active");
     }
@@ -94,7 +90,7 @@ function dibujarCanvas() {
  
   function perdiste() {
     Swal.fire({ 
-      title: "Perdiste!",
+      title: "Perdiste! La palabra secreta era: " + palabraSecreta,
       icon: "error",
       confirmButtonColor:"#0B5345",
     }

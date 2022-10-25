@@ -7,6 +7,8 @@ const btn_desist = document.querySelector(".button_desist");
 const container_principal = document.querySelector("#principal_desaparecer");
 const container_add = document.querySelector("#aparecer_add");
 const container_play = document.querySelector("#aparecer_canvas");
+const imagenes = document.querySelector(".imagenes");
+const ahorcado_img = document.querySelectorAll(".ahorcado_img");
 
 let palabras=["JAVA", "JAVASCRIPT", "PYTHON","HTML","CANVAS","COBOL", "RUBY","KOTLIN","PASCAL", "REACT", "TECLADO", "MOUSE", "MONITOR",
 "NOTEBOOK", "SERVER", "GIT", "GITHUB", "ALURA", "ORACLE", "ONE", "ACCENTURE", "GOOGLE", "GLOBANT", "META" ]
@@ -33,12 +35,38 @@ btn_return.addEventListener("click", function () {
 
 //recarga partida CHEQUEAR
 btn_new_game.addEventListener("click", function(){
-    location.reload();
+    // location.reload();
+    letras = [];
+    errores=8;
+    palabraCorrecta = [];
+    letrasIncorrectas = [];
+    numeroDeErrores = 8;
+    letraElegida = [];
+    ahorcado_img.forEach(element => {
+      element.classList.remove("active");
+    });
+    setTimeout(() => {
+      comenzarJuego();
+    }, 300);
+
 })
 
 //desisitir partida, muestra pantalla principal
 btn_desist.addEventListener("click", function(){
-    location.reload();
+  
+  Swal.fire({ 
+    title: "La palabra secreta era: " + palabraSecreta,
+    icon: "warning",
+    confirmButtonColor:"#0B5345",
+    timer: 3000,
+    timerProgressBar: true,
+    showConfirmButton: false,
+  }
+  )
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
+    
 })
 
 
@@ -109,8 +137,16 @@ function verificarLetra(keyCode) {
 function guardarPalabra() {
 
     let nuevaPalabra = document.getElementById("add_new-word").value;
-  
-    if(nuevaPalabra !== ""){
+
+    if(nuevaPalabra.length < 3){
+      Swal.fire({ 
+        title: "La palabra debe contener al menos tres letras",
+        icon: "warning",
+        confirmButtonColor:"#0B5345",
+      }
+      )
+      return;
+    } else if(nuevaPalabra !== ""){
       palabras.push(nuevaPalabra.toUpperCase());
       Swal.fire({ 
         title: "Palabra guardada con exito",
@@ -132,6 +168,8 @@ function guardarPalabra() {
 // al click hace que se guarde la palabra
 document.getElementById("btn_add").onclick = () => {
     guardarPalabra();
+    comenzarJuego();
+    container_add.classList.remove("active");
     }
 
 
