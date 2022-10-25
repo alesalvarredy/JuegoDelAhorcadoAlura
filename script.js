@@ -161,11 +161,15 @@ function guardarPalabra() {
       Swal.fire({ 
         title: "Palabra guardada con exito",
         icon: "success",
-        confirmButtonColor:"#0B5345",
+        timer: 1500,
+        timerProgressBar: true,
+        showConfirmButton: false,
       }
       )
-      comenzarJuego();
-      container_add.classList.remove("active");
+      setTimeout(() => {
+        comenzarJuego();
+        container_add.classList.remove("active"); 
+      }, 2000);
     }else{
         Swal.fire({ 
             title: "Por favor ingrese la palabra",
