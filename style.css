@@ -37,7 +37,7 @@ main{
 }
 
 .container_principal.active{
-  display: none;
+display: none;
 }
 
 .principal_logo{
@@ -102,10 +102,12 @@ main{
   width: 100%;
   flex-direction: column;
   align-items: center;
+
 }
 
 .container_add.active{
   display: flex;
+  
 }
 
 .add_input{
