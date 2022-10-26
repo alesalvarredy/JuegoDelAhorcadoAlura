@@ -11,7 +11,7 @@ const imagenes = document.querySelector(".imagenes");
 const ahorcado_img = document.querySelectorAll(".ahorcado_img");
 
 let palabras=["JAVA", "JAVASCRIPT", "PYTHON","HTML","CANVAS","COBOL", "RUBY","KOTLIN","PASCAL", "REACT", "TECLADO", "MOUSE", "MONITOR",
-"NOTEBOOK", "SERVER", "GIT", "GITHUB", "ALURA", "ORACLE", "ONE", "ACCENTURE", "GOOGLE", "GLOBANT", "META" ]
+"NOTEBOOK", "SERVER", "GIT", "GITHUB", "ALURA", "ORACLE", "ONE" ];
 let tablero = document.getElementById("horca").getContext("2d");
 let palabraSecreta = "";
 let letras = [];
