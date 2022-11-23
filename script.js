@@ -157,7 +157,7 @@ function guardarPalabra() {
       )
       return false;
     } else if(nuevaPalabra !== ""){
-      palabras.push(nuevaPalabra.toUpperCase());
+      palabras.unshift(nuevaPalabra.toUpperCase());
       Swal.fire({ 
         title: "Palabra guardada con exito",
         icon: "success",
